@@ -19,3 +19,4 @@ def soma_algarismos(numero):
 
 print(soma_algarismos(235))  # Resultado: 10
 print(soma_algarismos(121))  # Resultado: 4
+
