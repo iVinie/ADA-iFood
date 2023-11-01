@@ -37,12 +37,12 @@ o=3
 def contar_letras(frase):
     frase = frase.lower()
     unicas = {}
-    for palavra in frase:
-        if palavra not in unicas:
-            if palavra != ' ':
-                unicas[palavra] = 1
+    for letra in frase:
+        if letra not in unicas:
+            if letra != ' ':
+                unicas.update({f"{letra}": 1})
         else:
-            unicas[palavra] += 1
+            unicas[letra] += 1
     return unicas
 
 frase = "Dicionários são legais"
@@ -62,7 +62,7 @@ def contar_palavras(frase):
     unicas = {}
     for palavra in palavras:
         if palavra not in unicas:
-            unicas[palavra] = 1
+            unicas.update({f"{palavra}": 1})
         else:
             unicas[palavra] += 1
     return unicas
