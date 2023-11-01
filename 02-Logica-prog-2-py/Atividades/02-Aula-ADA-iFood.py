@@ -39,9 +39,7 @@ def contar_letras(frase):
     unicas = {}
     for palavra in frase:
         if palavra not in unicas:
-            if palavra == ' ':
-                pass
-            else:
+            if palavra != ' ':
                 unicas[palavra] = 1
         else:
             unicas[palavra] += 1
