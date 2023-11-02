@@ -40,7 +40,7 @@ def contar_letras(frase):
     for letra in frase:
         if letra not in unicas:
             if letra != ' ':
-                unicas.update({f"{letra}": 1})
+                unicas.update({letra: 1})
         else:
             unicas[letra] += 1
     return unicas
@@ -62,7 +62,7 @@ def contar_palavras(frase):
     unicas = {}
     for palavra in palavras:
         if palavra not in unicas:
-            unicas.update({f"{palavra}": 1})
+            unicas.update({palavra: 1})
         else:
             unicas[palavra] += 1
     return unicas
@@ -72,3 +72,19 @@ print(frase)
 resultado_2 = contar_palavras(frase)
 for palavra, qtd in resultado_2.items():
     print(f'{palavra}: {qtd}')
+    
+    
+    '''
+    Crie uma lista com 4 números inteiros e outra com 4 chaves (notas), e utilize a função
+    zip, para criar um dicionário onde a chave seja a lista de notas e o valor a lista de números
+    '''
+    
+def dicionario_notas(lista_numero, lista_string):
+    dicionario = {}
+    for chave, valor in zip(lista_string, lista_numero):
+        dicionario.update({chave: valor})
+    return dicionario
+lista_numeros = [10, 8, 5, 7]
+lista_strings = ["nota1", "nota2", "nota3", "nota4"]
+dicionario = dicionario_notas(lista_numeros, lista_strings)
+print (dicionario)
